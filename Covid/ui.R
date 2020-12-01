@@ -12,13 +12,9 @@ dashboardPage(title="US COVID-19 Cases by State",
                     choices = NULL),
         dateRangeInput("range", "Date range:",
                        start = "2020-01-22",
-                       end = Sys.Date()-1) #I'm in Korean Time zone
+                       end = Sys.Date()) #I'm in Korean Time zone
     ),
     dashboardBody(
-        # fluidRow(
-        #     box(textOutput("title"))
-        # ),
-        
         fluidRow(
             infoBoxOutput("poscases",width=6),
             infoBoxOutput("totalhos", width=6)
