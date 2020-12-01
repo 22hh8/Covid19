@@ -12,7 +12,7 @@ dashboardPage(title="US COVID-19 Cases by State",
                     choices = NULL),
         dateRangeInput("range", "Date range:",
                        start = "2020-01-22",
-                       end = "2020-11-29")
+                       end = Sys.Date()-1) #I'm in Korean Time zone
     ),
     dashboardBody(
         # fluidRow(

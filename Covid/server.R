@@ -13,7 +13,7 @@ shinyServer(function(input,output,session) {
             session = session,
             filePath = "https://covidtracking.com/data/download/all-states-history.csv",
             readFunc = read_csv)
-    
+
     observeEvent(input$state,{
         updateSelectInput(session,"state",choices = c(unique(df()$state)))
     }, once=TRUE)
